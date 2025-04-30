@@ -1,0 +1,16 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY ASU IS
+	PORT (S0, S1, S2, S3 : IN STD_LOGIC;
+			L0, L1, L2, L3 : OUT STD_LOGIC );
+END ASU;
+
+ARCHITECTURE Behavior OF ASU IS
+BEGIN
+	L0 <= ((NOT S0) AND (NOT S1) AND (NOT S3)) OR (S1 AND S3);
+	L1 <= ((NOT S1) AND S2 AND S3) OR (S1 AND (NOT S3));
+	L2 <= ((NOT S0) AND (NOT S1) AND (NOT S3) AND (NOT S4));
+	L3 <= 0;
+END Behavior;

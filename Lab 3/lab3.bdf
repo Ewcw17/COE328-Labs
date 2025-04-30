@@ -1,0 +1,121 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(symbol
+	(rect 224 224 392 336)
+	(text "ASU" (rect 5 0 29 11)(font "Arial" ))
+	(text "inst" (rect 8 96 26 107)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Cin" (rect 0 0 17 11)(font "Arial" ))
+		(text "Cin" (rect 21 27 38 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "X[3..0]" (rect 0 0 31 11)(font "Arial" ))
+		(text "X[3..0]" (rect 21 43 52 54)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Y[3..0]" (rect 0 0 31 11)(font "Arial" ))
+		(text "Y[3..0]" (rect 21 59 52 70)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "S[3..0]" (rect 0 0 31 11)(font "Arial" ))
+		(text "S[3..0]" (rect 121 27 152 38)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "Cout" (rect 0 0 24 11)(font "Arial" ))
+		(text "Cout" (rect 127 43 151 54)(font "Arial" ))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "Overflow" (rect 0 0 44 11)(font "Arial" ))
+		(text "Overflow" (rect 110 59 154 70)(font "Arial" ))
+		(line (pt 168 64)(pt 152 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 96))
+	)
+)
+(symbol
+	(rect 480 224 656 304)
+	(text "sseg" (rect 5 0 29 11)(font "Arial" ))
+	(text "inst1" (rect 8 64 32 75)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "bcd[3..0]" (rect 0 0 42 11)(font "Arial" ))
+		(text "bcd[3..0]" (rect 21 27 63 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "leds[1..7]" (rect 0 0 44 11)(font "Arial" ))
+		(text "leds[1..7]" (rect 118 27 162 38)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "nleds[1..7]" (rect 0 0 50 11)(font "Arial" ))
+		(text "nleds[1..7]" (rect 113 43 163 54)(font "Arial" ))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 64))
+	)
+)
+(connector
+	(pt 392 272)
+	(pt 456 272)
+)
+(connector
+	(pt 456 272)
+	(pt 456 488)
+)
+(connector
+	(pt 392 288)
+	(pt 432 288)
+)
+(connector
+	(pt 432 288)
+	(pt 432 496)
+)
+(connector
+	(pt 392 256)
+	(pt 480 256)
+	(bus)
+)

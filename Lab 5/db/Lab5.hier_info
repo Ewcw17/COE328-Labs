@@ -1,0 +1,136 @@
+|Stinky_Doodoo
+cleds[7] <= sseg:inst2.leds[7]
+cleds[6] <= sseg:inst2.leds[6]
+cleds[5] <= sseg:inst2.leds[5]
+cleds[4] <= sseg:inst2.leds[4]
+cleds[3] <= sseg:inst2.leds[3]
+cleds[2] <= sseg:inst2.leds[2]
+cleds[1] <= sseg:inst2.leds[1]
+Datain => machine:inst.data_in
+Clk => machine:inst.clk
+reset => machine:inst.reset
+sleds[7] <= sseg:inst3.leds[7]
+sleds[6] <= sseg:inst3.leds[6]
+sleds[5] <= sseg:inst3.leds[5]
+sleds[4] <= sseg:inst3.leds[4]
+sleds[3] <= sseg:inst3.leds[3]
+sleds[2] <= sseg:inst3.leds[2]
+sleds[1] <= sseg:inst3.leds[1]
+
+
+|Stinky_Doodoo|sseg:inst2
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN10
+bcd[0] => Mux4.IN10
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN9
+bcd[1] => Mux4.IN9
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN8
+bcd[2] => Mux4.IN8
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+bcd[3] => nleds[7].DATAIN
+leds[7] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+nleds[7] <= bcd[3].DB_MAX_OUTPUT_PORT_TYPE
+nleds[6] <= <VCC>
+nleds[5] <= <VCC>
+nleds[4] <= <VCC>
+nleds[3] <= <VCC>
+nleds[2] <= <VCC>
+nleds[1] <= <VCC>
+
+
+|Stinky_Doodoo|machine:inst
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+data_in => yfsm.OUTPUTSELECT
+clk => yfsm~9.DATAIN
+reset => yfsm~11.DATAIN
+student_id[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+student_id[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+student_id[2] <= <GND>
+student_id[3] <= <GND>
+current_state[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+current_state[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+current_state[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Stinky_Doodoo|sseg:inst3
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN10
+bcd[0] => Mux4.IN10
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN9
+bcd[1] => Mux4.IN9
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN8
+bcd[2] => Mux4.IN8
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+bcd[3] => nleds[7].DATAIN
+leds[7] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+nleds[7] <= bcd[3].DB_MAX_OUTPUT_PORT_TYPE
+nleds[6] <= <VCC>
+nleds[5] <= <VCC>
+nleds[4] <= <VCC>
+nleds[3] <= <VCC>
+nleds[2] <= <VCC>
+nleds[1] <= <VCC>
+
+
